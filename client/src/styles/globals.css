@@ -1,0 +1,47 @@
+/* GLOBAL STYLES FOR APP */
+:root {
+    --nav_height_home: 13rem;
+    --nav_height: 3.4rem;
+    --nav_colors: #fff;
+    --logo_font_size: 2.1rem;
+    --logo_width: 10rem;
+    --nav_user_font_size: 2rem;
+    --footer_height: 12rem;
+    --footer_height_mobile: 13rem;
+    --social_icon_size: 1.4rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #88888888;
+}
+
+html,
+body,
+#root,
+.App {
+    background-color: white;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden
+}
+
+.App {
+    overflow-y: auto;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-track {
+    background: #FFF; 
+}
+::-webkit-scrollbar-thumb {
+    background: #555; 
+}
+::-webkit-scrollbar {
+    width: 7px;
+}

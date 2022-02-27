@@ -1,0 +1,29 @@
+/* Styles for Abuot page */
+
+/* The About container */
+.About {
+    width: 100vw;
+    height: fit-content;
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 0 3.5rem 0;
+}
+
+/* The about content */
+.About h1.title {
+    font-family: 'Lato', sans-serif;
+    color: #444;
+    margin: .8rem 0;
+}
+
+/* The about content */
+.About .About-content {
+    width: 70%;
+    font-family: 'Lato', sans-serif;
+    /* cunsomizable */
+    color: #333;
+    line-height: 1.4rem;
+}

@@ -1,0 +1,74 @@
+/* Styles for Menu component */
+
+
+/* The menu in it's initial state (desktop) */
+.menu-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - var(--logo_width));
+    height: var(--nav_height);
+    padding-right: 1rem;
+    z-index: 1;
+}
+
+/* NavLink standart design */
+.menu-nav .HeaderNavLink {
+    transition: all .2s ease;
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0 1rem;
+}
+
+
+
+/* Responsive */
+
+/* nav-bar gets smaller, links are compressed */
+@media screen and (max-width: 760px) {
+    .menu-nav .HeaderNavLink {
+        margin: 0 .5rem;
+    }
+}
+
+/* menu is now set to slider mode */
+@media screen and (max-width: 620px) {
+    .menu-nav {
+        transition: all .28s ease;
+        background-color: #2828282a;
+        background: linear-gradient(135deg, #282828be, #1d1d1dee);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 16rem;
+        max-width: 100%;
+        height: 100vh;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding-top: var(--nav_height);
+        /* hide - default */
+        transform: translateX(100%);
+        opacity: .2;
+    }
+    /* appended class for showing slider nav */
+    .menu-nav-show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .menu-nav .HeaderNavLink {
+        margin-top: .4rem;
+        /* background-color: #44444477; */
+        width: 85%;
+        height: 1.8rem;
+        padding: 1rem;
+        border-radius: .2rem;
+        /* center text */
+        display: flex;
+        align-items: center;
+    }
+    .menu-nav .HeaderNavLink:hover {
+        background-color: #22222244;
+    }
+
+}

@@ -1,0 +1,25 @@
+/* Styles for SocialIcons Component */
+
+/* social-icnos container */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--social_icon_height);
+    width: 5.4rem;
+}
+
+/* all icons styling */
+.social-icons img {
+    height: 1.6rem;
+    width: 1.6rem;
+    /* mouse animation */
+    transition: all .15s ease;
+    cursor: pointer;
+    opacity: .8;
+}
+
+/* icons hover animation */
+.social-icons img:hover {
+    opacity: 1;
+}

@@ -1,0 +1,160 @@
+/* Styles for Header component */
+
+
+/* App header - the top navigator */
+.app-header {
+    background: linear-gradient(269.81deg, rgba(206, 0, 112, 0.9) 0.15%, rgba(112, 0, 255, 0.9) 99.85%);
+    width: 100vw;
+    height: var(--nav_height_home);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* The content wrapper (for the slogens) in Header */
+.app-header .header-content-wrapper {
+    /* background: green; */
+    margin-top: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+/* Site Slogen */
+.header-content-wrapper .Slogen {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    height: 3.7rem;
+}
+
+/* Site Sub-Slogen */
+.header-content-wrapper .Sub-Slogen {
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 100;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* App Sub-Header - the top navigator section */
+.navbar {
+    width: 100%;
+    height: var(--nav_height);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* MyPragnency Logo */
+.navbar .logo {
+    font-family: 'Dongle', sans-serif;
+    font-size: var(--logo_font_size);
+    color: var(--nav_colors);
+    cursor: default;
+    width: var(--logo_width);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Button, controlling Menu (responsive) */
+.navbar .btn-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--nav_height);
+    height: var(--nav_height);
+    background: transparent;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    /* center svg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* default appearance (desktop mode) */
+    display: none;
+}
+
+.navbar .btn-menu img {
+    width: 75%;
+    height: 75%;
+}
+
+
+
+/* Responsive */
+
+/* nav-bar gets smaller, links are compressed */
+@media screen and (max-width: 760px) {
+    .navbar .logo {
+        width: fit-content;
+        margin-right: 1rem;
+    }
+    .navbar {
+        padding-right: 0;
+    }
+}
+
+/* Menu is now set to slider mode */
+@media screen and (max-width: 620px) {
+    .navbar {
+        padding-right: 0;
+        justify-content: space-between;
+    }
+    .navbar .btn-menu {
+        display: flex;
+    }
+}
+
+/* Slogen reformatting */
+@media screen and (max-width: 500px) {
+    .app-header {
+        height: calc(var(--nav_height_home) - 1rem);
+    }
+    .app-header .btn-menu img {
+        width: 60%;
+        height: 60%;
+    }
+    .app-header .header-content-wrapper {
+        margin-top: .9rem;
+    }
+    .app-header .header-content-wrapper .Slogen {
+        font-size: 3rem;
+        height: 3rem;
+    }
+    .app-header .header-content-wrapper .Sub-Slogen {
+        font-size: 1rem;
+    }
+}
+
+/* Slogen reformatting v2 */
+@media screen and (max-width: 400px) {
+    .app-header {
+        height: calc(var(--nav_height_home) + 3rem);
+    }
+    .app-header .btn-menu img {
+        width: 50%;
+        height: 50%;
+    }
+    .app-header .header-content-wrapper {
+        height: 60%;
+        justify-content: space-between;
+    }
+    .app-header .header-content-wrapper .Slogen {
+        min-width: 11rem;
+        width: 50%;
+        line-height: 2.3rem;
+    }
+    .app-header .header-content-wrapper .Sub-Slogen {
+        font-size: 1rem;
+        width: 80%;
+        line-height: .7rem;
+    }
+}

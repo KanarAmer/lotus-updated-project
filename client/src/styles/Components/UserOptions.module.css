@@ -1,0 +1,94 @@
+/* Styles for UserOptions component */
+
+
+
+/* Unsigned status bar -- show login option */
+.btn-user {
+    background-color: #ffffffbb;
+    min-width: 5rem;
+    height: 1.6rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    /* text design */
+    text-decoration: none;
+    color: #FF007A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
+}
+.btn-user-unsigned {
+    margin-left: auto;
+    background-color: #ffffffbb;
+    min-width: 5rem;
+    height: 1.6rem;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    /* text design */
+    text-decoration: none;
+    color: #FF007A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+/* Signed status bar -- show user profile */
+.btn-user-signed {
+    margin-left: auto;
+    border: 2px solid white;
+    border-radius: 7px;
+    width: fit-content;
+    padding: 0 .4rem;
+    height: 1.6rem;
+    cursor: pointer;
+    margin-left: auto;
+    /* text design */
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    /* align inner content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* User name */
+.btn-user-signed h4 {
+    width: 100%;
+    /* height: 100%; */
+    z-index: 1;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 620px) {
+    .btn-user-signed,
+    .btn-user-unsigned {
+        margin-left: 0;
+        /* border-radius: 0; */
+        color: #ff59a9;
+        background-color: #e0e0e0;
+        margin-top: .4rem;
+        width: 85%;
+        height: 1.8rem;
+        padding: 1rem;
+        border-radius: .2rem;
+    }
+    .btn-user-signed {
+        font-size: 1.8rem;
+    }
+}
